@@ -141,10 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // elemento section
     const $productsContainer = document.getElementById('products');
 
+    const enCarrito = document.getElementsByClassName('contenedor-carrito')
+
+    console.log('enCarrito',enCarrito)
     
-    let productos_a_mostrar = carrito
-    if(window.location.pathname.includes('index.html')) {
-      productos_a_mostrar = products
+    let productos_a_mostrar = products
+    if(enCarrito.length) {
+      productos_a_mostrar =  carrito
     }
 
     // rellenamos el elemento section con cards (una card por cada producto en el array de productos)
