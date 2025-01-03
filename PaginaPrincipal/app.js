@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     let productos_a_mostrar = carrito
-    if(window.location.pathname == 'index.html') {
+    if(window.location.pathname.includes('index.html')) {
       productos_a_mostrar = products
     }
 
